@@ -11,7 +11,7 @@ type SeriesData = {
 }
 
 type ChartData = {
-    labels:{
+    labels: {
         categories: string[];
     };
     series: SeriesData[];
@@ -27,7 +27,7 @@ const BarChart = () => {
         series: [
             {
                 name: "",
-                data: []                   
+                data: []
             }
         ]
     });
@@ -47,7 +47,7 @@ const BarChart = () => {
                     series: [
                         {
                             name: "% Success",
-                            data: mySeries                  
+                            data: mySeries
                         }
                     ]
                 });
@@ -63,24 +63,12 @@ const BarChart = () => {
             }
         },
     };
-    
-    //const mockData = {
-        //labels: {
-            //categories: ['Anakin', 'Barry Allen', 'Kal-El', 'Logan', 'Padmé']
-        //},
-        //series: [
-           // {
-                //name: "% Sucesso",
-                //data: [43.6, 67.1, 67.7, 45.6, 71.1]                   
-            //}
-        //]
-   // };
-    
+
 
     return (
 
-        <Chart 
-            options={{ ...options, xaxis: chartData.labels}}
+        <Chart
+            options={{ ...options, xaxis: chartData.labels }}
             series={chartData.series}
             type="bar"
             height="240"
